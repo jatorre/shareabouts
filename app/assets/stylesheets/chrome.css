@@ -248,9 +248,31 @@ table.regions {
 }
 
 /* Feature Popup - Content */
-.feature  textarea {
-  width : 90%;
+.feature form > div {
+  position : relative;
 }
+.feature  textarea, 
+.feature  input[type="text"] {
+  width : 100%;
+}
+.feature label {
+  display : none;
+  position : absolute;
+  right : 1em;
+  top : 0;
+  bottom : 0;
+  z-index: 0
+}
+.feature input[type="text"]:-moz-placeholder           { color: rgba(85, 85, 85, 0.5); }
+.feature input[type="text"]:-ms-input-placeholder      { color: rgba(85, 85, 85, 0.5); }
+.feature input[type="text"]::-webkit-input-placeholder { color: rgba(85, 85, 85, 0.5); }
+.feature input[type="text"]:focus + label,
+.feature textarea:focus + label{
+  color: rgba(85, 85, 85, 0.5);
+  font-weight: normal;
+  display: block;
+}
+
 .feature div {
   margin-bottom: 10px;
 }
